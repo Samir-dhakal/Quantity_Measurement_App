@@ -1,13 +1,17 @@
-import org.junit.Test;
+package com.apps.quantitymeasurement;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.testng.annotations.Test;
+import com.apps.quantitymeasurement.QuantityMeasurementApp.Feet;
 
-public  class UC2TestCase {
+import static org.testng.Assert.assertNotEquals;
+import static org.testng.AssertJUnit.assertFalse;
+import static org.testng.AssertJUnit.assertTrue;
+
+public class UC2TestCase {
     @Test
     public void testFeetEquality_SameValue(){
 
-        Feet f1= new QuantityMeasurementApp.Feet(1.0);
+        Feet f1= new Feet(1.0);
         QuantityMeasurementApp.Feet f2= new QuantityMeasurementApp.Feet(1.0);
         boolean output=f1.equals(f2);
         assertTrue(output);
